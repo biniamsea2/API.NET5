@@ -2,7 +2,7 @@
 
 *Author: Biniam Tesfamariam*  
 
-Blazor Web Assembly added
+##### Blazor Web Assembly added
 ----  
 
 ## Program Summary 
