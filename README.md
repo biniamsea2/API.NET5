@@ -3,7 +3,6 @@
 *Author: Biniam Tesfamariam*  
 
 ##### Blazor Web Assembly added
-----  
 
 ## Program Summary 
 Working with the new upgrades in .NET 5, WebAPI. Worked with the integration of OpenAPI into the project, how it works, and why it's useful. 
