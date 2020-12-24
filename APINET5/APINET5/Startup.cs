@@ -26,7 +26,17 @@ namespace APINET5
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "APIPolicy",
+                    builder =>
+                    {
+                        //cant overload method withorigins with 2 urls? ("*") might allow it
+                        builder.WithOrigins(origins: "https://localhost:44319")
+                        //can add get,post,put,delete:
+                        .WithMethods(methods: "GET");
+                    });
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -47,6 +57,9 @@ namespace APINET5
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //applying policy:
+            app.UseCors(policyName: "APIPolicy");
 
             app.UseAuthorization();
 
