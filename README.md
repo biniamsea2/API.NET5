@@ -11,7 +11,6 @@ Working with the new upgrades in .NET 5, WebAPI. Worked with the integration of 
 
 ###### This application includes the following:  
  
- 
 ---
 
 ### Getting Started
