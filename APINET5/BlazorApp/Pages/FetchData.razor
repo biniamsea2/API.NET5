@@ -1,56 +1,59 @@
-﻿@page "/fetchdata"
+@page "/fetchdata"
 @inject HttpClient Http
 
-    <h1>Weather forecast</h1>
+<h1>Weather forecast</h1>
 
-    <p>This component demonstrates fetching data from the server.</p>
+<p>This component demonstrates fetching data from the server.</p>
 
-    @if (forecasts == null)
-    {
-        <p><em>Loading...</em></p>
-
-    }
-    else
-    {
-        <table class="table">
-            <thead>
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
                 <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
+                    <td>@forecast.Date</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var forecast in forecasts)
-                {
-                    <tr>
-                        <td>@forecast.Date.ToShortDateString()</td>
-                        <td>@forecast.TemperatureC</td>
-                        <td>@forecast.TemperatureF</td>
-                        <td>@forecast.Summary</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    // we got an error because we didnt have an ICollection of type BlazorApp.WeatherForecast
+    private ICollection<BlazorApp.WeatherForecast> forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //base url for api: where we're talking to
+        swaggerClient client = new("https://localhost:44392/", Http);
+        //returns a set of weather forecasts
+        forecasts = await client.WeatherForecastAsync();
     }
 
-    @code {
-        private WeatherForecast[] forecasts;
+    public class WeatherForecast
+    {
+        public DateTime Date { get; set; }
 
-        protected override async Task OnInitializedAsync()
-        {
-            swaggerClient client = new("https://localhost:44319/", Http);
-        }
+        public int TemperatureC { get; set; }
 
-        public class WeatherForecast
-        {
-            public DateTime Date { get; set; }
+        public string Summary { get; set; }
 
-            public int TemperatureC { get; set; }
-
-            public string Summary { get; set; }
-
-            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-        }
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
+}
