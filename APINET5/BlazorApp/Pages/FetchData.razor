@@ -39,6 +39,8 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        //base url for api: where we're talking to
+        swaggerClient client = new("https://localhost:44392/", Http);
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
     }
 
