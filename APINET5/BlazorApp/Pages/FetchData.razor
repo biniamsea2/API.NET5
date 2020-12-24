@@ -24,7 +24,7 @@ else
             @foreach (var forecast in forecasts)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.Date</td>
                     <td>@forecast.TemperatureC</td>
                     <td>@forecast.TemperatureF</td>
                     <td>@forecast.Summary</td>
@@ -35,13 +35,15 @@ else
 }
 
 @code {
-    private WeatherForecast[] forecasts;
+    // we got an error because we didnt have an ICollection of type BlazorApp.WeatherForecast
+    private ICollection<BlazorApp.WeatherForecast> forecasts;
 
     protected override async Task OnInitializedAsync()
     {
         //base url for api: where we're talking to
         swaggerClient client = new("https://localhost:44392/", Http);
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        //returns a set of weather forecasts
+        forecasts = await client.WeatherForecastAsync();
     }
 
     public class WeatherForecast
