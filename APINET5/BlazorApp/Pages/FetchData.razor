@@ -1,6 +1,5 @@
 ﻿@page "/fetchdata"
 @inject HttpClient Http
-@inject Microsoft.OpenApi.Models
 
     <h1>Weather forecast</h1>
 
@@ -41,7 +40,6 @@
         protected override async Task OnInitializedAsync()
         {
             swaggerClient client = new("https://localhost:44319/", Http);
-            forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
         }
 
         public class WeatherForecast
