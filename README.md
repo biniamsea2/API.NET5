@@ -31,8 +31,7 @@ Then select and open ```APINET5.sln```
 
 ---
 
-### Visuals
-
+### Visuals  
 ### #1
 ![Image 1]()
 ### #2
