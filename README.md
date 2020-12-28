@@ -35,6 +35,6 @@ Then select and open ```APINET5.sln```
 ### #1
 ![Image 1]()
 ### #2
-![Image 1]()
+![Image 2]()
 ### #3
-![Image 1]()
+![Image 3]()
