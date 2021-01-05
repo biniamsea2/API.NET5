@@ -44,9 +44,9 @@ Then select and open ```APINET5.sln```
 ---
 
 ### Visuals  
-### #1 Home
+### Home Page
 ![Image 1](https://github.com/biniamsea2/API.NET5/blob/main/Screenshot%20(22).png)
-### #2
+### Application fetching data from API instead of seeded data
 ![Image 2](https://github.com/biniamsea2/API.NET5/blob/main/Screenshot%20(27).png)
-### #3
+### Confirmation of update 
 ![Image 3](https://github.com/biniamsea2/API.NET5/blob/main/Screenshot%20(28).png)
