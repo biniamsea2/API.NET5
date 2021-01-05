@@ -10,7 +10,29 @@ Working with the new upgrades in .NET 5, WebAPI. Worked with the integration of 
 ## Application Specifications
 
 ###### This application includes the following:  
+ #### 1) Startup File 
+- Cors enabled within ConfigureServices 
+- Generator configuration 
+- User Interface configuration 
+- Policies Added
+
+#### 2) Controller  
+- WeatherForecastController (Default)
+
+#### 3) Data  
+- DBContext present and properly configured  
+- DB Tables for each entity model (DbSet<Kobe>)  
+- Composite key association present in OnModelCreating override.  
+- appsettings.json file present with name of database updated.  
  
+#### 4) Models  
+- Each Entity from the DB Table converted into a Model  
+- Proper naming conventions of Primary keys  
+- Navigation properties present in each Model where required  
+
+#### 5) Blazor App Project
+- Swagger.Json file added
+
  
  
  
