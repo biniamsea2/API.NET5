@@ -30,7 +30,7 @@ Working with the new upgrades in .NET 5, WebAPI. Worked with the integration of 
 - Proper naming conventions of Primary keys  
 - Navigation properties present in each Model where required  
 
-#### 5) Blazor App Project
+#### 5) Blazor App Project added to solution
 - Swagger.Json file added
 
  
