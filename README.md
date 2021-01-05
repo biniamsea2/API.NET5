@@ -44,9 +44,9 @@ Then select and open ```APINET5.sln```
 ---
 
 ### Visuals  
-### #1
-![Image 1]()
+### #1 Home
+![Image 1](https://github.com/biniamsea2/API.NET5/blob/main/Screenshot%20(22).png)
 ### #2
-![Image 2]()
+![Image 2](https://github.com/biniamsea2/API.NET5/blob/main/Screenshot%20(27).png)
 ### #3
-![Image 3]()
+![Image 3](https://github.com/biniamsea2/API.NET5/blob/main/Screenshot%20(28).png)
