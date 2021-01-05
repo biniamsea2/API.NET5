@@ -19,23 +19,12 @@ Working with the new upgrades in .NET 5, WebAPI. Worked with the integration of 
 #### 2) Controller  
 - WeatherForecastController (Default)
 
-#### 3) Data  
-- DBContext present and properly configured  
-- DB Tables for each entity model (DbSet<Kobe>)  
-- Composite key association present in OnModelCreating override.  
-- appsettings.json file present with name of database updated.  
- 
-#### 4) Models  
-- Each Entity from the DB Table converted into a Model  
-- Proper naming conventions of Primary keys  
-- Navigation properties present in each Model where required  
+#### 3) Connected Services
+- Auto generated client built using NSwag off of Swagger.Json file
 
-#### 5) Blazor App Project added to solution
+#### 4) Blazor App Project added to solution
 - Swagger.Json file added
 
- 
- 
- 
 ---
 
 ### Getting Started
