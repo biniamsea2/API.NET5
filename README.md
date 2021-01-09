@@ -22,7 +22,6 @@ Working with the new upgrades in .NET 5, WebAPI. Worked with the integration of 
 
 #### 4) Blazor App Project added to solution
 - Swagger.Json file added
-
 ---
 
 ### Getting Started
